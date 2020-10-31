@@ -3,9 +3,9 @@
 This is the Laravel TDK API. This Repository contains methods for easily interacting. Below are examples to get you started.
 
 [![Latest Version](https://img.shields.io/github/release/thecaliskan/laravel-tdk.svg?style=flat-square)](https://github.com/thecaliskan/laravel-tdk/releases)
-[![Build Status](https://img.shields.io/travis/thecaliskan/laravel-tdk/master.svg?style=flat-square)](https://travis-ci.org/thecaliskan/laravel-tdk)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/thecaliskan/laravel-tdk.svg?style=flat-square)](https://scrutinizer-ci.com/g/thecaliskan/laravel-tdk)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Quality Score](https://img.shields.io/scrutinizer/g/thecaliskan/laravel-tdk.svg?style=flat-square)](https://scrutinizer-ci.com/g/thecaliskan/laravel-tdk)
+[![StyleCI](https://styleci.io/repos/308938778/shield?branch=main)](https://styleci.io/repos/308938778)
 [![Total Downloads](https://img.shields.io/packagist/dt/thecaliskan/laravel-tdk.svg?style=flat-square)](https://packagist.org/packages/thecaliskan/laravel-tdk)
 
 ## Installation
