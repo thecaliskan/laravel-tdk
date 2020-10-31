@@ -1,6 +1,5 @@
 <?php
 
-
 namespace TheCaliskan\TDK;
 
 use Illuminate\Contracts\Foundation\Application;
@@ -18,7 +17,7 @@ class TDK
     protected $app;
 
     /**
-     * The Laravel HTTP Client
+     * The Laravel HTTP Client.
      *
      * @var PendingRequest
      */
@@ -28,6 +27,7 @@ class TDK
      * Create a new Payment instance.
      *
      * @param Application $app
+     *
      * @return void
      */
     public function __construct(Application $app)
@@ -39,8 +39,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByCurrentTurkishDictionary(string $word)
     {
@@ -51,8 +53,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByWesternOriginDictionary(string $word)
     {
@@ -63,8 +67,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByScanDictionary(string $word)
     {
@@ -75,8 +81,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByCompilationDictionary(string $word)
     {
@@ -87,8 +95,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByProverbDictionary(string $word)
     {
@@ -99,8 +109,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByForeignWordProvisionsGuide(string $word)
     {
@@ -112,8 +124,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByFrequentlyConfusedWordsGuide(string $word)
     {
@@ -125,8 +139,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByCommonMistakesGuide(string $word)
     {
@@ -139,21 +155,25 @@ class TDK
     /**
      * @param string $word
      * @param string $science
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByScienceAndArtTermsDictionary(string $word, string $science = 'tümü')
     {
         return $this->client->get('/terim', [
-            'ara' => $word,
+            'ara'     => $word,
             'eser_ad' => $science,
         ])->tdkThrow()->json();
     }
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByNursingTermsDictionary(string $word)
     {
@@ -164,8 +184,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByMedicineAndPharmacyTermsDictionary(string $word)
     {
@@ -176,8 +198,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function searchByInternationalMetrologyDictionary(string $word)
     {
@@ -188,15 +212,17 @@ class TDK
 
     /**
      * @param string $word
-     * @param int $by
-     * @param int $gender
-     * @return array
+     * @param int    $by
+     * @param int    $gender
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function person(string $word, int $by, int $gender)
     {
         return $this->client->get('/adlar', [
-            'ara' => $word,
+            'ara'  => $word,
             'gore' => $by,
             'cins' => $gender,
         ])->tdkThrow()->json();
@@ -204,8 +230,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function personByName(string $word)
     {
@@ -214,8 +242,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function personByWomanName(string $word)
     {
@@ -224,8 +254,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function personByManName(string $word)
     {
@@ -234,8 +266,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function personByMeaning(string $word)
     {
@@ -244,8 +278,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function personByWomanMeaning(string $word)
     {
@@ -254,8 +290,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function personByManMeaning(string $word)
     {
@@ -264,21 +302,25 @@ class TDK
 
     /**
      * @param string $word
-     * @param int $dialect
-     * @return array
+     * @param int    $dialect
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionary(string $word, int $dialect = 0)
     {
         return $this->client->get('/lehceler', [
-                'ara' => $word,
-            ] + ($dialect ? ['lehce' => $dialect] : []))->tdkThrow()->json();
+            'ara' => $word,
+        ] + ($dialect ? ['lehce' => $dialect] : []))->tdkThrow()->json();
     }
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByTurkeyTurkish(string $word)
     {
@@ -287,8 +329,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByKazakhTurkish(string $word)
     {
@@ -297,8 +341,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByUzbekTurkish(string $word)
     {
@@ -307,8 +353,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByAzerbaijaniTurkish(string $word)
     {
@@ -317,8 +365,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByUighurTurkish(string $word)
     {
@@ -327,8 +377,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByBashkirTurkish(string $word)
     {
@@ -337,8 +389,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByTatarTurkish(string $word)
     {
@@ -347,8 +401,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByTurkmenTurkish(string $word)
     {
@@ -357,8 +413,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByKyrgyzTurkish(string $word)
     {
@@ -367,8 +425,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function comparativeDialectsDictionaryByRussian(string $word)
     {
@@ -377,8 +437,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function suggestions(string $word)
     {
@@ -389,8 +451,10 @@ class TDK
 
     /**
      * @param string $word
-     * @return array
+     *
      * @throws TDKException|RequestException
+     *
+     * @return array
      */
     public function spelling(string $word)
     {
@@ -401,8 +465,10 @@ class TDK
 
     /**
      * @param string $soundID
-     * @return string
+     *
      * @throws RequestException
+     *
+     * @return string
      */
     public function sound(string $soundID)
     {

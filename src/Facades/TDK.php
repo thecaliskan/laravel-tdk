@@ -1,8 +1,6 @@
 <?php
 
-
 namespace TheCaliskan\TDK\Facades;
-
 
 use Illuminate\Support\Facades\Facade;
 
