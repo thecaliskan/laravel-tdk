@@ -1,8 +1,6 @@
 <?php
 
-
 namespace TheCaliskan\TDK;
-
 
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +14,6 @@ class TDKServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
     }
 
     /**
@@ -27,7 +24,6 @@ class TDKServiceProvider extends ServiceProvider
     public function boot()
     {
         Response::macro('tdkThrow', function () {
-
             $this->throw();
 
             if (isset($this->json()['error'])) {

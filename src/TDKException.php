@@ -1,8 +1,6 @@
 <?php
 
-
 namespace TheCaliskan\TDK;
-
 
 use Illuminate\Http\Client\Response;
 use Throwable;
