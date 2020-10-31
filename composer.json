@@ -1,0 +1,37 @@
+{
+  "name": "thecaliskan/laravel-tdk",
+  "description": "Laravel TDK API",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Emre Caliskan",
+      "email": "bilgi@emrecaliskan.com.tr"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "TheCaliskan\\TDK\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.2",
+    "illuminate/http": "~5.8.0|^6.0|^7.0|^8.0",
+    "guzzlehttp/guzzle": "^6.0|^7.0",
+    "ext-json": "*"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "TheCaliskan\\TDK\\TDKServiceProvider"
+      ],
+      "aliases": {
+        "TDK": "TheCaliskan\\TDK\\Facades\\TDK"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
