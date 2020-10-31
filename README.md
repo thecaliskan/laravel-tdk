@@ -76,7 +76,7 @@ Storage::put('a2015.wav',TDK::sound('a2015'));
 This Repository is an Open Source under the MIT license. It is, thus, maintained by collaborators and contributors.
 
 Feel free to contribute in any way. As an example you may: 
-* Trying out the `master` code
+* Trying out the `main` code
 * Create issues if you find problems
 * Reply to other people's issues
 * Review PRs
